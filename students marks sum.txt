@@ -1,0 +1,13 @@
+int marks_summation(int* marks, int number_of_students, char gender) {
+  //Write your code here.
+  int mark = 0;
+  for(int i = 0; i < number_of_students; i++){
+      if(gender == 'b'){
+        if(i%2 == 0) mark += marks[i];
+      }
+      if(gender == 'g'){
+        if(i%2 == 1) mark += marks[i];
+      }
+  }
+  return mark;
+}

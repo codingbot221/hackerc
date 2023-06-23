@@ -1,0 +1,30 @@
+
+     
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    char *input; input = (char*)malloc(1000 * sizeof(char));
+    int digits[10]={0};
+
+    scanf("%s", input);
+
+    int i=0, x=0;
+    while(*(input+i)!='\0')
+    {
+        x = (*(input+i))-48;
+        if(x>=0 && x<=9)
+        {
+            digits[x]++;
+        }
+        i++;
+    }
+
+    for(i=0; i<10; i++)
+        printf("%d ", digits[i]);
+
+    return 0;
+}

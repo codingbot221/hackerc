@@ -1,0 +1,12 @@
+int temp, *ptr = arr+num-1;
+for(i =0 ; i < num/2 ; i++)
+{
+    temp = *ptr;
+    *ptr= *(arr+i);
+    arr[i] = temp;
+    ptr--;
+}
+
+for(i = 0; i < num; i++)
+    printf("%d ", *(arr + i));
+free(arr);
